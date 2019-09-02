@@ -23,11 +23,11 @@ KingRich Made it
 {
     width: 100%;
     height: 100%;
-	background-color: #2b1d2c;
+	background-color: #25a125;
 	background-image: url(background.jpg);
     background-size: cover;
-    filter: blur(5px);
     position: fixed;
+    filter: blur(10px);
     left: 0;
     right: 0;
     z-index: 1;
@@ -156,46 +156,51 @@ KingRich Made it
 
 .bgcolor-first 
 {
-    background-color: #D95B43;
+    background-color: rgb(141, 128, 125);
 }
 
 .bgcolor-second 
 {
-    background-color: #C02942;
+    background-color: rgb(240, 30, 118);
 }
 
 .bgcolor-third 
 {
-    background-color: #542437;
+    background-color: #03e73c;
 }
 
 .bgcolor-fourth 
 {
-    background-color: #53777A;
+    background-color: rgb(93, 255, 19);
 }
 
 
 .color-first 
 {
-    color: #D95B43;
+    color: rgb(187, 171, 167);
 }
 
 .color-second 
 {
-    color: #C02942;
+    color: rgb(240, 30, 118);
 }
 
 .color-third 
 {
-    color: #bd517c;
+    color: #03e73c;
 }
 
 .color-fourth 
 {
-    color: #53777A;
+    color: rgb(93, 255, 19);
 }
 
 
 @keyframes animate-stripes {
     0% {background-position: 0 0;} 100% {background-position: 60px 0;}
 }
+
+
+
+
+    

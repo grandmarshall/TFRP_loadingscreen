@@ -1,19 +1,55 @@
 <html>
     <head>
         <link href="style.css" rel="stylesheet" type="text/css" />
+        <style>
+
+                p {
+                    text-transform: uppercase;
+                    letter-spacing: .5em;
+                    display: inline-block;
+                    border: 10px double rgba(248, 248, 248, 0.801);
+                    border-width: 10px 0;
+                    padding: 1.5em 0em;
+                    position: absolute;
+                    top: 18%;
+                    left: 30%;
+                    width: 50em;
+                    
+                    font: 400 1em/1.5 "Helvetica";  color: rgba(248, 248, 248, 0.801);font-weight: bold; text-align: center; margin: 0
+                  
+                }
+                d {
+                    text-transform: uppercase;
+                    letter-spacing: .3em;
+                    
+                    
+                    position: absolute;
+                    top: 95%;
+                    left: 30%;
+                    width: 50em;
+                    
+                font: 400 1em/1.5 "Times New Roman";  color: rgba(248, 248, 248, 0.801); text-align: center; margin: 0
+                  
+                }</style>
+        
+        
     </head>
     <body>
+            
         <div id="background">
         </div>
+        
         <div id="logo">
+            <p>Elder RolePlay</p>
+            <d>Müziği durdurmak için SPACE tuşuna basınız.</d>
             <div id="log" class="log">Error initializing log</div>
             <div id="debug" class="log log-top-right"></div>
             <div class="loading-container">
                 <div class ="loading-labels">
-                    <div id="INIT_BEFORE_MAP_LOADED-label" class="color-first">Pre-Map</div>
-                    <div id="MAP-label" class="color-second">Map</div>
-                    <div id="INIT_AFTER_MAP_LOADED-label" class="color-third">Post-Map</div>
-                    <div id="INIT_SESSION-label" class="color-fourth">Session</div>
+                    <div id="INIT_BEFORE_MAP_LOADED-label" class="color-first">Harita Öncesi</div>
+                    <div id="MAP-label" class="color-second">Harita</div>
+                    <div id="INIT_AFTER_MAP_LOADED-label" class="color-third">Harita Sonrası</div>
+                    <div id="INIT_SESSION-label" class="color-fourth">Sunucu</div>
                 </div>
                 <div class="loading-bar-container">
                     <div id="INIT_BEFORE_MAP_LOADED-bar" class="loading-bar bgcolor-first"></div>
@@ -23,6 +59,7 @@
                 </div>
             </div>
         </div>
+       
 
 <script type="text/javascript">
 if (!String.format) {
@@ -269,12 +306,40 @@ var newTypeWithOrder = function newTypeWithOrder(name, count) {
 	setInterval(function(){	demoFuncs.length && demoFuncs.shift()();}, 350);
 }
 </script>
+
     </body>
     <audio id="Loading" autoplay loop >
         <source src="music/Loading.ogg" type="audio/ogg">
    </audio>
    <script>
     var vid = document.getElementById("Loading");
-    vid.volume = 0.1
+    vid.volume = 0.04
+    
+	
+    var play = true;
+    var myAudio = document.getElementById("Loading");
+    
+    myAudio.volume = 0.1;
+	
+	
+    function onKeyDown(event) {
+            switch (event.keyCode) {
+                case 32: //SpaceBar                    
+                    if (play) {
+                        myAudio.pause();
+                        play = false;
+                    } else {
+                        myAudio.play();
+                        play = true;
+                    }
+                    break;
+            }
+      return false;
+    }
+    window.addEventListener("keydown", onKeyDown, false);
+
+
+    
    </script>
+ 
 </html>
