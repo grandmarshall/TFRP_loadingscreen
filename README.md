@@ -1,4 +1,5 @@
 Müzik durdurma seçeneği ve basit birkaç css eklendi.
+https://pasteboard.co/Ivye6Pa.png
 
 # TFRP_loadingscreen
 A simple loadingscreen for fivem
